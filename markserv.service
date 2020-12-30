@@ -1,0 +1,12 @@
+[Unit]
+Description=simple go application
+
+[Service]
+EnvironmentFile=/etc/markserv.env
+Type=simple
+Restart=always
+RestartSec=5s
+ExecStart=markserv --dir ${DIR} --addr ${ADDR}
+
+[Install]
+WantedBy=multi-user.target
