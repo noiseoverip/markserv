@@ -6,7 +6,7 @@ EnvironmentFile=/etc/markserv.env
 Type=simple
 Restart=always
 RestartSec=5s
-ExecStart=markserv --dir ${DIR} --addr ${ADDR}
+ExecStart=markserv --dir ${DIR} --addr ${ADDR} --baseURL "${BASE_URL}"
 
 [Install]
 WantedBy=multi-user.target
